@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="it.iten.xx.integration.CSV_viro_requests"
+    name="it.iten.xx.integration.CSV_viro_publish_samples"
     suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20230202094229"
+    targetNamespace="http://xmlns.example.com/20230202173001"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://www.tibco.com/pe/WriteToLogActivitySchema"
-    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/file"
-    xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.write"
-    xmlns:ns3="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+output"
-    xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata"
-    xmlns:ns5="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input"
-    xmlns:ns6="http://www.iren.it/fnc_distrib_lista_pod_meter/v1"
+    xmlns:ns1="http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+output"
+    xmlns:ns2="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata"
+    xmlns:ns3="http://www.tibco.com/namespaces/tnt/plugins/file"
+    xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.write"
+    xmlns:ns5="http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+input"
+    xmlns:ns6="http://www.iren.it/CSV_viro_publish/v1"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -195,6 +195,33 @@
             </xs:complexType>
             <xs:element name="ActivityInput" type="tns:LogParametersType"/>
         </xs:schema>
+        <schema
+            targetNamespace="http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+output"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+output">
+            <element name="Text" type="string"/>
+        </schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/parseexceptions/xsd"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/activity/parseexceptions/xsd">
+            <complexType name="BadDataFormatExceptionType">
+                <sequence>
+                    <element form="unqualified" name="msg" type="string"/>
+                    <element form="unqualified" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="BadDataFormatException" type="tns:BadDataFormatExceptionType"/>
+            <complexType name="FileNotFoundExceptionType">
+                <complexContent>
+                    <extension base="tns:BadDataFormatExceptionType">
+                        <sequence>
+                            <element name="FileName" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="FileNotFoundException" type="tns:FileNotFoundExceptionType"/>
+        </schema>
         <schema
             targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/file"
             xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/file">
@@ -555,32 +582,17 @@
             </complexType>
             <element name="ReadFileFaultData" type="tns:ReadFileFaultDataType"/>
         </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/parseexceptions/xsd"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/activity/parseexceptions/xsd">
-            <complexType name="BadDataFormatExceptionType">
-                <sequence>
-                    <element form="unqualified" name="msg" type="string"/>
-                    <element form="unqualified" name="msgCode" type="string"/>
-                </sequence>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://tns.tibco.com/bw/activity/parseexceptions/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata">
+            <import namespace="http://tns.tibco.com/bw/activity/parseexceptions/xsd"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:BadDataFormatException"/>
+                </choice>
             </complexType>
-            <element name="BadDataFormatException" type="tns:BadDataFormatExceptionType"/>
-            <complexType name="FileNotFoundExceptionType">
-                <complexContent>
-                    <extension base="tns:BadDataFormatExceptionType">
-                        <sequence>
-                            <element name="FileName" type="string"/>
-                        </sequence>
-                    </extension>
-                </complexContent>
-            </complexType>
-            <element name="FileNotFoundException" type="tns:FileNotFoundExceptionType"/>
-        </schema>
-        <schema
-            targetNamespace="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+output"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+output">
-            <element name="Text" type="string"/>
         </schema>
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.write"
@@ -596,43 +608,26 @@
                 </choice>
             </complexType>
         </schema>
-        <schema elementFormDefault="unqualified"
-            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://tns.tibco.com/bw/activity/parseexceptions/xsd" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata">
-            <import namespace="http://tns.tibco.com/bw/activity/parseexceptions/xsd"/>
-            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
-            <complexType name="ActivityErrorDataType">
-                <choice>
-                    <element maxOccurs="1" minOccurs="0" ref="Q1:BadDataFormatException"/>
-                </choice>
-            </complexType>
-        </schema>
         <schema
-            targetNamespace="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input"
+            targetNamespace="http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+input"
             xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.iren.it/CSV_viro_requests/v1" xmlns:tns="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input">
-            <import namespace="http://www.iren.it/CSV_viro_requests/v1"/>
+            xmlns:Q1="http://www.iren.it/CSV_viro_publish/v1" xmlns:tns="http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+input">
+            <import namespace="http://www.iren.it/CSV_viro_publish/v1"/>
             <complexType name="Rows">
                 <sequence>
-                    <element maxOccurs="unbounded" minOccurs="0" ref="Q1:ViroCsvRow"/>
+                    <element maxOccurs="unbounded" minOccurs="0" ref="Q1:viroPublishSamplesRow"/>
                 </sequence>
             </complexType>
             <element name="Rows" type="tns:Rows"/>
         </schema>
-        <wsdl:definitions
-            targetNamespace="http://xmlns.example.com/20230202094229"
-            xmlns:tns="http://xmlns.example.com/20230202094229"
-            xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
-            xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="user"
-        createdOn="Thu Feb 02 09:42:29 CET 2023" description=""
+        createdOn="Thu Feb 02 17:07:30 CET 2023" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.5.1 HF4 V64 2020-06-08" scalable="true"
         singleton="true" stateless="false" type="IT"/>
     <tibex:ProcessInterface context=""
-        input="{http://www.iren.it/fnc_distrib_lista_pod_meter/v1}RequestJMS" output=""/>
+        input="{http://www.iren.it/CSV_viro_publish/v1}viroPublishSamplesRows" output=""/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"
         xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
@@ -694,8 +689,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
-                                    <layoutConstraint x="13"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    <layoutConstraint x="20"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
@@ -733,32 +728,36 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="893"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    <layoutConstraint x="793"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -770,32 +769,36 @@
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="103"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    x="126"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
-                                    <children type="4002 bw.file.write">
+                                    <children type="4002 bw.generalactivities.log">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles fontName="Segoe UI"
@@ -807,10 +810,10 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="645"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    x="703"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
-                                    <children type="4002 bw.parse.renderdata">
+                                    <children type="4002 bw.generalactivities.bwassign">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -844,10 +847,10 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="519"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    x="226"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
-                                    <children type="4002 bw.generalactivities.log">
+                                    <children type="4002 bw.generalactivities.bwassign">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -881,10 +884,10 @@
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="775"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    x="330"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
-                                    <children type="4002 bw.generalactivities.bwassign">
+                                    <children type="4002 bw.parse.renderdata">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -918,10 +921,10 @@
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="218"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    x="478"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
-                                    <children type="4002 bw.generalactivities.bwassign">
+                                    <children type="4002 bw.file.write">
                                     <children type="4017">
                                     <styles
                                     fontName="Segoe UI"
@@ -955,8 +958,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="372"
-                                    xsi:type="notation:Bounds" y="130"/>
+                                    x="587"
+                                    xsi:type="notation:Bounds" y="116"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -970,8 +973,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="317"
-                                    width="1008" xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="233"
+                                    width="879" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -981,7 +984,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="317" width="1029" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="233" width="929" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -997,6 +1000,7 @@
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
                                     </children>
                                     <children type="3032">
                                     <children type="4005">
@@ -1006,6 +1010,7 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -1013,6 +1018,7 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -1020,6 +1026,7 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -1027,6 +1034,7 @@
                                     <styles
                                     fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
@@ -1041,12 +1049,13 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="26"
-                                    xsi:type="notation:Bounds" y="63"/>
+                                    x="40"
+                                    xsi:type="notation:Bounds" y="65"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     </children>
                                     <styles fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
@@ -1057,10 +1066,11 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
                                     <layoutConstraint
-                                    height="168" width="497" xsi:type="notation:Bounds"/>
+                                    height="168" width="456" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
                                     </children>
                                     <styles fontName="Segoe UI"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
@@ -1071,12 +1081,13 @@
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity/@faultHandlers"/>
                             </children>
                             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity/@faultHandlers"/>
-                            <layoutConstraint height="200" width="503" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="200" width="462" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1086,7 +1097,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="518" width="1029" x="1"
+                    <layoutConstraint height="434" width="929" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1095,7 +1106,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="570" width="1371" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="486" width="1271" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1112,7 +1123,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1122,8 +1133,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1133,7 +1144,7 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
@@ -1141,11 +1152,11 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
-            <bendpoints points="[25, 0, -147, 0]$[148, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1167,7 +1178,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1183,58 +1194,49 @@
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
         <tibex:namespaceItem
-            namespace="http://www.iren.it/CSV_viro_requests/v1" prefix="tns2"/>
-        <tibex:namespaceItem
-            namespace="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input" prefix="tns1"/>
-        <tibex:namespaceItem
-            namespace="http://www.iren.it/fnc_distrib_lista_pod_meter/v1" prefix="tns3"/>
-        <tibex:namespaceItem
-            namespace="http://www.tibco.com/namespaces/tnt/plugins/file" prefix="tns4"/>
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/file" prefix="tns1"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/fnc_distrib_lista_pod_meter/v1"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/CSV_viro_publish/v1"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:ActivityInput" name="StartLog-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:WriteActivityInputTextClass"
-            name="WriteFile-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:WriteActivityOutputClass"
-            name="WriteFile" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:ActivityErrorData"
-            name="_error_WriteFile" sca-bpel:internal="true"/>
-        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:ActivityInput" name="Log1-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:ActivityInput" name="ErrorLog-input" sca-bpel:internal="true"/>
+        <bpws:variable name="currentDate" type="xsd:string"/>
+        <bpws:variable name="Fullname" type="xsd:string"/>
         <bpws:variable name="dataFormatResource"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dataformat}DataFormat" type="xsd:string">
             <bpws:from>
-                <bpws:literal>it.iren.x.Dataformat.viro_request</bpws:literal>
+                <bpws:literal>it.iren.x.Dataformat.viroPublishSamples</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns5:Rows" name="Renderdata-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns3:Text" name="Renderdata" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:ActivityErrorData"
+        <bpws:variable element="ns1:Text" name="Renderdata" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:ActivityErrorData"
             name="_error_Renderdata" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:ActivityInput" name="ErrorLog-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns0:ActivityInput" name="EndLog-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:RequestJMS" name="Start"
-            sca-bpel:internal="true" tibex:parameter="in"/>
-        <bpws:variable name="period" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="xsd:string"/>
-        <bpws:variable name="root_path" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path" type="xsd:string"/>
-        <bpws:variable name="filename" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/filename" type="xsd:string"/>
-        <bpws:variable name="currentDate" type="xsd:string"/>
-        <bpws:variable name="FullName" type="xsd:string"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:WriteActivityInputTextClass"
+            name="WriteFile-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:WriteActivityOutputClass"
+            name="WriteFile" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:ActivityErrorData"
+            name="_error_WriteFile" sca-bpel:internal="true"/>
         <bpws:variable name="folder" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path" type="xsd:string"/>
+        <bpws:variable name="root_path" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path" type="xsd:string"/>
+        <bpws:variable name="filename" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename" type="xsd:string"/>
+        <bpws:variable element="ns6:viroPublishSamplesRows" name="Start"
+            sca-bpel:internal="true" tibex:parameter="in"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1247,7 +1249,7 @@
     <bpws:scope name="scope">
         <bpws:faultHandlers>
             <bpws:catchAll tibex:faultDetailsVar="FaultDetails"
-                tibex:faultNameVar="FaultName" tibex:xpdlId="685cc2a3-295e-4791-9e61-66dbeb90974b">
+                tibex:faultNameVar="FaultName" tibex:xpdlId="20e33dcf-9fbb-43e8-858f-1b301c217cc2">
                 <bpws:scope name="scope1">
                     <bpws:flow name="flow1">
                         <bpws:links/>
@@ -1255,10 +1257,10 @@
                             <tibex:activityExtension
                                 inputVariable="ErrorLog-input"
                                 name="ErrorLog"
-                                tibex:xpdlId="cc748873-812d-4b21-80a2-647a9490c313" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                tibex:xpdlId="01813752-8e31-419f-a23e-87d6f3a25bd6" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;Log1-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;tib:render-xml($FaultDetails)&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;ErrorLog-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;tib:render-xml($FaultDetails)&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -1286,21 +1288,21 @@
         </bpws:faultHandlers>
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="StartToLog" tibex:linkType="SUCCESS"/>
-                <bpws:link name="LogToWriteFile" tibex:linkType="SUCCESS"/>
-                <bpws:link name="RenderdataToWriteFile" tibex:linkType="SUCCESS"/>
-                <bpws:link name="WriteFileToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="Log2ToEnd" tibex:linkType="SUCCESS"/>
-                <bpws:link name="AssignToRenderdata" tibex:linkType="SUCCESS"/>
-                <bpws:link name="Assign1ToRenderdata" tibex:linkType="SUCCESS"/>
+                <bpws:link name="StartToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LogToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Log1ToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="AssignToLog1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="AssignToLog11" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderdataToLog1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="WriteFileToLog1" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
                     eventTimeout="0" name="Start"
-                    tibex:xpdlId="8ad448f0-6c50-4ea8-9b20-e892e534368a"
+                    tibex:xpdlId="40a4d1c8-17b2-4407-aae2-f757d12c7a2b"
                     variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
-                        <bpws:source linkName="StartToLog"/>
+                        <bpws:source linkName="StartToEnd"/>
                     </bpws:sources>
                     <tibex:eventSource>
                         <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1309,9 +1311,9 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension name="End"
-                    tibex:xpdlId="27b92675-a781-48de-9f47-a8f022998d94" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="3379e679-c3f8-4058-bb63-7d925b9f6706" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Log2ToEnd"/>
+                        <bpws:target linkName="Log1ToEnd"/>
                     </bpws:targets>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1332,16 +1334,16 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="StartLog-input"
                     name="StartLog"
-                    tibex:xpdlId="179b0905-adb5-441a-bda0-00871d5e4326" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="8c0ac653-7c28-494e-84cb-5d89ffc09fb8" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="StartToLog"/>
+                        <bpws:target linkName="StartToEnd"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="LogToWriteFile"/>
+                        <bpws:source linkName="LogToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;&amp;quot;Start Write CSV viroRequests&amp;quot;&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;StartLog-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;&amp;quot;Start create CSV&amp;quot;&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1363,82 +1365,18 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="WriteFile-input"
-                    name="WriteFile" outputVariable="WriteFile"
-                    tibex:xpdlId="40648121-bcea-4cdc-9fdc-a8246e6a9d67" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:activityExtension inputVariable="Log1-input"
+                    name="Log1"
+                    tibex:xpdlId="533fff1d-72dd-4e33-9c7e-a97b26fbe927" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RenderdataToWriteFile"/>
+                        <bpws:target linkName="WriteFileToLog1"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="WriteFileToEnd"/>
+                        <bpws:source linkName="Log1ToEnd"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/file&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Renderdata&quot;/>&lt;xsl:param name=&quot;FullName&quot;/>&lt;xsl:template name=&quot;WriteFile-input&quot; match=&quot;/&quot;>&lt;tns4:WriteActivityInputTextClass>&lt;fileName>&lt;xsl:value-of select=&quot;$FullName&quot;/>&lt;/fileName>&lt;textContent>&lt;xsl:value-of select=&quot;$Renderdata&quot;/>&lt;/textContent>&lt;/tns4:WriteActivityInputTextClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity activityTypeID="bw.file.write"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:file="http://ns.tibco.com/bw/palette/file" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/file#//WriteFile"/>
-                                    <value append="true"
-                                    compressFile="None"
-                                    createMissingDirectories="true"
-                                    encoding="text" xsi:type="file:WriteFile"/>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension
-                    inputVariable="Renderdata-input" name="Renderdata"
-                    outputVariable="Renderdata"
-                    tibex:xpdlId="43a10897-d301-437f-9191-7afa50bcbbd3" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="Assign1ToRenderdata"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="RenderdataToWriteFile"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input&quot; xmlns:tns2=&quot;http://www.iren.it/CSV_viro_requests/v1&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;period&quot;/>&lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&lt;tns1:Rows>&lt;xsl:for-each select=&quot;$Start/tns3:Records&quot;>&lt;tns2:ViroCsvRow>&lt;xsl:if test=&quot;tns3:cd_incrementale_richiesta&quot;>&lt;tns2:requestId>&lt;xsl:value-of select=&quot;tns3:cd_incrementale_richiesta&quot;/>&lt;/tns2:requestId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns3:cd_codice_pod&quot;>&lt;tns2:supplyPointId>&lt;xsl:value-of select=&quot;tns3:cd_codice_pod&quot;/>&lt;/tns2:supplyPointId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns3:cd_codice_meter&quot;>&lt;tns2:meterSerialNumber>&lt;xsl:value-of select=&quot;tns3:cd_codice_meter&quot;/>&lt;/tns2:meterSerialNumber>&lt;/xsl:if>&lt;xsl:if test=&quot;../tns3:index&quot;>&lt;tns2:itemId>&lt;xsl:value-of select=&quot;../tns3:index&quot;/>&lt;/tns2:itemId>&lt;/xsl:if>&lt;tns2:period>&lt;xsl:value-of select=&quot;$period&quot;/>&lt;/tns2:period>&lt;/tns2:ViroCsvRow>&lt;/xsl:for-each>&lt;/tns1:Rows>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                    </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.parse.renderdata"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:parse="http://ns.tibco.com/bw/palette/parse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/parse#//RenderData"/>
-                                    <value
-                                    dataFormat="dataFormatResource" xsi:type="parse:RenderData"/>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
-            </bpws:extensionActivity>
-            <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="EndLog-input"
-                    name="EndLog"
-                    tibex:xpdlId="68a50b84-b426-4ee7-b4ee-6a426c91bb9a" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                    <bpws:targets>
-                        <bpws:target linkName="WriteFileToEnd"/>
-                    </bpws:targets>
-                    <bpws:sources>
-                        <bpws:source linkName="Log2ToEnd"/>
-                    </bpws:sources>
-                    <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;EndLog-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;&amp;quot;End Write CSV viroRequests&amp;quot;&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log1-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;&amp;quot;End create CSV&amp;quot;&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1462,12 +1400,12 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="currentDate"
                     name="currentDate" outputVariable="currentDate"
-                    tibex:xpdlId="b7946518-6ea8-4b2d-9901-837f32c68c41" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="e65f7803-95cd-4dc4-b1d9-23e1e8171631" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="LogToWriteFile"/>
+                        <bpws:target linkName="LogToEnd"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="AssignToRenderdata"/>
+                        <bpws:source linkName="AssignToLog1"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1490,14 +1428,14 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="FullName"
-                    name="SetFullname" outputVariable="FullName"
-                    tibex:xpdlId="29bc31ea-4220-4bb8-9070-4794fa2f09d6" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:activityExtension inputVariable="Fullname"
+                    name="FullName" outputVariable="Fullname"
+                    tibex:xpdlId="436fc8cb-b9a7-41e1-9c38-aa6c54b2a1de" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="AssignToRenderdata"/>
+                        <bpws:target linkName="AssignToLog1"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Assign1ToRenderdata"/>
+                        <bpws:source linkName="AssignToLog11"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1512,7 +1450,71 @@
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//BWAssign"/>
-                                    <value processVariable="FullName" xsi:type="generalactivities:BWAssign"/>
+                                    <value processVariable="Fullname" xsi:type="generalactivities:BWAssign"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="Renderdata-input" name="Renderdata"
+                    outputVariable="Renderdata"
+                    tibex:xpdlId="762575a0-2f25-4303-adcc-4089e51a92d4" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="AssignToLog11"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="RenderdataToLog1"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.iren.it/CSV_viro_publish/v1&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/activity/render/xsd/+762575a0-2f25-4303-adcc-4089e51a92d4+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&lt;tns1:Rows>&lt;xsl:for-each select=&quot;$Start/tns:viroPublishSamplesRow&quot;>&lt;tns:viroPublishSamplesRow>&lt;xsl:if test=&quot;tns:itemId&quot;>&lt;tns:itemId>&lt;xsl:value-of select=&quot;tns:itemId&quot;/>&lt;/tns:itemId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:replyId&quot;>&lt;tns:replyId>&lt;xsl:value-of select=&quot;tns:replyId&quot;/>&lt;/tns:replyId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:supplyPointId&quot;>&lt;tns:supplyPointId>&lt;xsl:value-of select=&quot;tns:supplyPointId&quot;/>&lt;/tns:supplyPointId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:meterSerialNumber&quot;>&lt;tns:meterSerialNumber>&lt;xsl:value-of select=&quot;tns:meterSerialNumber&quot;/>&lt;/tns:meterSerialNumber>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:phaseElement&quot;>&lt;tns:phaseElement>&lt;xsl:value-of select=&quot;tns:phaseElement&quot;/>&lt;/tns:phaseElement>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:phase&quot;>&lt;tns:phase>&lt;xsl:value-of select=&quot;tns:phase&quot;/>&lt;/tns:phase>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:type&quot;>&lt;tns:type>&lt;xsl:value-of select=&quot;tns:type&quot;/>&lt;/tns:type>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:dateTime&quot;>&lt;tns:dateTime>&lt;xsl:value-of select=&quot;tns:dateTime&quot;/>&lt;/tns:dateTime>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:duration&quot;>&lt;tns:duration>&lt;xsl:value-of select=&quot;tns:duration&quot;/>&lt;/tns:duration>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:messageUnqueueTime&quot;>&lt;tns:messageUnqueueTime>&lt;xsl:value-of select=&quot;tns:messageUnqueueTime&quot;/>&lt;/tns:messageUnqueueTime>&lt;/xsl:if>&lt;/tns:viroPublishSamplesRow>&lt;/xsl:for-each>&lt;/tns1:Rows>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.parse.renderdata"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:parse="http://ns.tibco.com/bw/palette/parse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/parse#//RenderData"/>
+                                    <value
+                                    dataFormat="dataFormatResource" xsi:type="parse:RenderData"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="WriteFile-input"
+                    name="WriteFile" outputVariable="WriteFile"
+                    tibex:xpdlId="efe54726-cb9c-4f36-b5d3-2bf097425e5e" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="RenderdataToLog1"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="WriteFileToLog1"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/file&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Renderdata&quot;/>&lt;xsl:param name=&quot;Fullname&quot;/>&lt;xsl:template name=&quot;WriteFile-input&quot; match=&quot;/&quot;>&lt;tns1:WriteActivityInputTextClass>&lt;fileName>&lt;xsl:value-of select=&quot;$Fullname&quot;/>&lt;/fileName>&lt;textContent>&lt;xsl:value-of select=&quot;$Renderdata&quot;/>&lt;/textContent>&lt;/tns1:WriteActivityInputTextClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity activityTypeID="bw.file.write"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:file="http://ns.tibco.com/bw/palette/file" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/file#//WriteFile"/>
+                                    <value append="true"
+                                    compressFile="None"
+                                    createMissingDirectories="true"
+                                    encoding="text" xsi:type="file:WriteFile"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

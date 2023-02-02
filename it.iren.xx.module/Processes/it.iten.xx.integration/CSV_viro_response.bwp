@@ -582,18 +582,6 @@
             </complexType>
             <element name="ReadFileFaultData" type="tns:ReadFileFaultDataType"/>
         </schema>
-        <schema
-            targetNamespace="http://tns.tibco.com/bw/activity/render/xsd/+557be92d-2ae4-4e8f-8f35-46e02cb93075+input"
-            xmlns="http://www.w3.org/2001/XMLSchema"
-            xmlns:Q1="http://www.iren.it/CSV_viro_Response" xmlns:tns="http://tns.tibco.com/bw/activity/render/xsd/+557be92d-2ae4-4e8f-8f35-46e02cb93075+input">
-            <import namespace="http://www.iren.it/CSV_viro_Response"/>
-            <complexType name="Rows">
-                <sequence>
-                    <element maxOccurs="unbounded" minOccurs="0" ref="Q1:RowCSV"/>
-                </sequence>
-            </complexType>
-            <element name="Rows" type="tns:Rows"/>
-        </schema>
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -619,6 +607,18 @@
                     <element maxOccurs="1" minOccurs="0" ref="Q1:FileIOException"/>
                 </choice>
             </complexType>
+        </schema>
+        <schema
+            targetNamespace="http://tns.tibco.com/bw/activity/render/xsd/+557be92d-2ae4-4e8f-8f35-46e02cb93075+input"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://www.iren.it/CSV_viro_Response" xmlns:tns="http://tns.tibco.com/bw/activity/render/xsd/+557be92d-2ae4-4e8f-8f35-46e02cb93075+input">
+            <import namespace="http://www.iren.it/CSV_viro_Response"/>
+            <complexType name="Rows">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" ref="Q1:RowCSV"/>
+                </sequence>
+            </complexType>
+            <element name="Rows" type="tns:Rows"/>
         </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20230202152919"
@@ -1238,7 +1238,7 @@
             sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dataformat}DataFormat" type="xsd:string">
             <bpws:from>
-                <bpws:literal>it.iren.x.viro_response</bpws:literal>
+                <bpws:literal>it.iren.x.Dataformat.viro_response</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns1:Rows" name="Renderdata-input" sca-bpel:internal="true"/>

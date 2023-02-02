@@ -146,6 +146,78 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/root_path</name>
+			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/working_folder_path</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/filename</name>
+			<value>_viro_publish.csv</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/filename</name>
+			<value>_viro_publish_summary.csv</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/root_path</name>
+			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/working_folder_path</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path</name>
+			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename</name>
+			<value>_viro_publish_samples.csv</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-1/viro_request</name>
 			<value>viroRequest</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -156,6 +228,14 @@
 		<globalVariable>
 			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-2/viroResponse</name>
 			<value>viroResponse</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-3/queue</name>
+			<value>publishViro</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.iren.it/CSV_viro_publish/v1" elementFormDefault="qualified" targetNamespace="http://www.iren.it/CSV_viro_publish/v1">
+
+    <element name="viroPublishRow" type="tns:viroPublishRowType"></element>
+
+    <complexType name="viroPublishRowType">
+    	<sequence>
+    		<element name="itemId" type="string" minOccurs="0"></element>
+    		<element name="replyId" type="string" minOccurs="0"></element>
+    		<element name="supplyPointId" type="string" minOccurs="0"></element>
+    		<element name="meterSerialNumber" type="string"
+    			minOccurs="0">
+    		</element>
+    		<element name="status" type="string" minOccurs="0"></element>
+    		<element name="result" type="string" minOccurs="0"></element>
+    		<element name="readingDate" type="string" minOccurs="0"></element>
+    		<element name="startPeriodDate" type="string"
+    			minOccurs="0">
+    		</element>
+    		<element name="endPeriodDate" type="string" minOccurs="0"></element>
+    		<element name="ntvd" type="string" minOccurs="0"></element>
+    		<element name="errorCode" type="string" minOccurs="0"></element>
+    		<element name="errorReason" type="string" minOccurs="0"></element>
+    		<element name="timestamp" type="string" minOccurs="0"></element>
+    		<element name="messageUnqueueTime" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="viroPublishRows" type="tns:viroPublishRowsType"></element>
+    
+    <complexType name="viroPublishRowsType">
+    	<sequence>
+    		<element name="viroPublishRow" type="tns:viroPublishRowType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="viroPublishSummaryRow"
+    	type="tns:viroPublishSummaryRowType">
+    </element>
+    
+    <complexType name="viroPublishSummaryRowType">
+    	<sequence>
+    		<element name="itemId" type="string" minOccurs="0"></element>
+    		<element name="replyId" type="string" minOccurs="0"></element>
+    		<element name="supplyPointId" type="string" minOccurs="0"></element>
+    		<element name="meterSerialNumber" type="string"
+    			minOccurs="0">
+    		</element>
+    		<element name="phaseElement" type="string" minOccurs="0"></element>
+    		<element name="phase" type="string" minOccurs="0"></element>
+    		<element name="invertedPhaseFlag" type="string"
+    			minOccurs="0">
+    		</element>
+    		<element name="tshv" type="string" minOccurs="0"></element>
+    		<element name="tavv" type="string" minOccurs="0"></element>
+    		<element name="tlov" type="string" minOccurs="0"></element>
+    		<element name="nshv" type="string" minOccurs="0"></element>
+    		<element name="navv" type="string" minOccurs="0"></element>
+    		<element name="nlov" type="string" minOccurs="0"></element>
+    		<element name="messageUnqueueTime" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="viroPublishSummaryRows"
+    	type="tns:viroPublishSummaryRowsType">
+    </element>
+    
+    <complexType name="viroPublishSummaryRowsType">
+    	<sequence>
+    		<element name="viroPublishSummaryRow" type="tns:viroPublishSummaryRowType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="viroPublishSamplesRow"
+    	type="tns:viroPublishSamplesRowType">
+    </element>
+    
+    <complexType name="viroPublishSamplesRowType">
+    	<sequence>
+    		<element name="itemId" type="string" minOccurs="0"></element>
+    		<element name="replyId" type="string" minOccurs="0"></element>
+    		<element name="supplyPointId" type="string" minOccurs="0"></element>
+    		<element name="meterSerialNumber" type="string"
+    			minOccurs="0">
+    		</element>
+    		<element name="phaseElement" type="string" minOccurs="0"></element>
+    		<element name="phase" type="string" minOccurs="0"></element>
+    		<element name="type" type="string" minOccurs="0"></element>
+    		<element name="dateTime" type="string" minOccurs="0"></element>
+    		<element name="duration" type="string" minOccurs="0"></element>
+    		<element name="messageUnqueueTime" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="viroPublishSamplesRows"
+    	type="tns:viroPublishSamplesRowsType">
+    </element>
+    
+    <complexType name="viroPublishSamplesRowsType">
+    	<sequence>
+    		<element name="viroPublishSamplesRow" type="tns:viroPublishSamplesRowType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>
