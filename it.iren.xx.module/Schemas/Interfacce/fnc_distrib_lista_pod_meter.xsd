@@ -18,4 +18,13 @@
     		<element maxOccurs="unbounded" minOccurs="0" name="Records" type="tns:ResponseDBType"/>
     	</sequence>
     </complexType>
+
+    <element name="RequestJMS" type="tns:RequestJMSType"></element>
+    
+    <complexType name="RequestJMSType">
+    	<sequence>
+    		<element name="Records" type="tns:ResponseDBType" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="index" type="int" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
 </schema>

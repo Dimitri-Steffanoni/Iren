@@ -106,6 +106,14 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>/Connections/PostgresDB/timeout</name>
+			<value>60</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>/Connections/JMS/Enel/url</name>
 			<value>tcp://192.168.1.128:7222</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -135,6 +143,22 @@
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/path</name>
+			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/period</name>
+			<value>1</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
 			<isOverride>false</isOverride>
 		</globalVariable>
 	</globalVariables>

@@ -12,6 +12,7 @@
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.JDBCQuery"
     xmlns:ns4="http://www.iren.it/fnc_distrib_lista_pod_meter/v1"
     xmlns:ns5="http://tns.tibco.com/bw/palette/internal/accumulateoutput+4d6b1bb0-b8c3-4300-8047-d055a4499bdb"
+    xmlns:ns6="http://www.iren.it/JMS_viro_requests/v1"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -469,8 +470,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="669"
-                                    xsi:type="notation:Bounds" y="108"/>
+                                    <layoutConstraint x="1108"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
                                     <children type="4017">
@@ -551,8 +552,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="578"
-                                    xsi:type="notation:Bounds" y="108"/>
+                                    x="1025"
+                                    xsi:type="notation:Bounds" y="102"/>
                                     </children>
                                     <children type="4018">
                                     <children type="3018">
@@ -696,6 +697,114 @@
                                     x="117"
                                     xsi:type="notation:Bounds" y="31"/>
                                     </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    x="245"
+                                    xsi:type="notation:Bounds" y="31"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activities.5"/>
+
+                                    <layoutConstraint
+                                    x="382"
+                                    xsi:type="notation:Bounds" y="31"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -711,10 +820,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity"/>
 
                                     <layoutConstraint
-                                    height="108"
-                                    width="400"
-                                    x="2"
-                                    xsi:type="notation:Bounds" y="2"/>
+                                    height="121"
+                                    width="616" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -727,7 +834,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="121"
-                                    width="261"
+                                    width="619"
                                     x="15"
                                     xsi:type="notation:Bounds" y="20"/>
                                     </children>
@@ -818,7 +925,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
-                                    height="165" width="301"
+                                    height="165" width="659"
                                     x="297"
                                     xsi:type="notation:Bounds" y="52"/>
                                     </children>
@@ -835,7 +942,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="298"
-                                    width="814" xsi:type="notation:Bounds"/>
+                                    width="1381" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -845,7 +952,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="298" width="817" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="298" width="1161" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -958,7 +1065,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="499" width="817" x="1"
+                    <layoutConstraint height="499" width="1161" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -967,7 +1074,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="551" width="1159" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="551" width="1726" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1039,14 +1146,36 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1/@children.0/@children.0/@children.0/@children.1"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.3" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@links/@children.2"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, -5, -90, 0]$[91, 0, -24, 5]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@links/@children.3"/>
+            <bendpoints points="[25, -2, -91, 0]$[92, 0, -24, 2]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@links/@children.4"/>
+            <bendpoints points="[25, 0, -166, 0]$[179, 0, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1060,8 +1189,13 @@
             namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
         <tibex:namespaceItem
             namespace="http://www.iren.it/fnc_distrib_lista_pod_meter/v1" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://twobeat.enel.com/enterviro/types/1.0" prefix="to"/>
+        <tibex:namespaceItem
+            namespace="http://www.iren.it/JMS_viro_requests/v1" prefix="tns3"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/fnc_distrib_lista_pod_meter/v1"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/JMS_viro_requests/v1"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1094,6 +1228,13 @@
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns5:AccumulatedOutput" name="Accumulate" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:RequestJMS"
+            name="JMS_viro_requests-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:RequestJMS"
+            name="CSV_viro_requests-input" sca-bpel:internal="true"/>
+        <bpws:variable name="period" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1171,7 +1312,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0e455400-7bf1-4f18-8392-5ec91b2e7c49+output&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Accumulate&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns2:ResponsesDB>&lt;xsl:for-each select=&quot;$Accumulate/tns:resultSet&quot;>&lt;xsl:for-each select=&quot;Record&quot;>&lt;tns2:Records>&lt;xsl:if test=&quot;cd_incrementale_richiesta&quot;>&lt;tns2:cd_incrementale_richiesta>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/tns2:cd_incrementale_richiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_pod&quot;>&lt;tns2:cd_codice_pod>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/tns2:cd_codice_pod>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_meter&quot;>&lt;tns2:cd_codice_meter>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/tns2:cd_codice_meter>&lt;/xsl:if>&lt;/tns2:Records>&lt;/xsl:for-each>&lt;/xsl:for-each>&lt;/tns2:ResponsesDB>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0e455400-7bf1-4f18-8392-5ec91b2e7c49+output&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Accumulate&quot;/>&#xa;    &lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:ResponsesDB>&#xa;            &lt;xsl:for-each select=&quot;$Accumulate/tns4:resultSet&quot;>&#xa;                &lt;xsl:for-each select=&quot;Record&quot;>&#xa;                    &lt;tns2:Records>&#xa;                        &lt;xsl:if test=&quot;cd_incrementale_richiesta&quot;>&#xa;                            &lt;tns2:cd_incrementale_richiesta>&#xa;                                &lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&#xa;                            &lt;/tns2:cd_incrementale_richiesta>&#xa;                        &lt;/xsl:if>&#xa;                        &lt;xsl:if test=&quot;cd_codice_pod&quot;>&#xa;                            &lt;tns2:cd_codice_pod>&#xa;                                &lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&#xa;                            &lt;/tns2:cd_codice_pod>&#xa;                        &lt;/xsl:if>&#xa;                        &lt;xsl:if test=&quot;cd_codice_meter&quot;>&#xa;                            &lt;tns2:cd_codice_meter>&#xa;                                &lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&#xa;                            &lt;/tns2:cd_codice_meter>&#xa;                        &lt;/xsl:if>&#xa;                    &lt;/tns2:Records>&#xa;                &lt;/xsl:for-each>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns2:ResponsesDB>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1255,9 +1396,7 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="While" tibex:group="while"
-                tibex:indexOriginalName="index"
-                tibex:indexToGlobal="false" tibex:xpdlId="fba533df-102f-4eed-9156-df08a806318b">
+            <bpws:scope name="While" tibex:group="while" tibex:xpdlId="fba533df-102f-4eed-9156-df08a806318b">
                 <bpws:targets>
                     <bpws:target linkName="StartLogToWhile"/>
                 </bpws:targets>
@@ -1289,7 +1428,12 @@
                             <bpws:links>
                                 <bpws:link name="GroupStartToJDBCQuery" tibex:linkType="SUCCESS"/>
                                 <bpws:link name="JDBCQueryToGroupEnd" tibex:linkType="SUCCESS"/>
-                                <bpws:link name="AssignToGroupEnd" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="AssignToJMS_viro_requests" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="JMS_viro_requestsToCSV_viro_requests" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="CSV_viro_requestsToAccumulate" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="GroupStart"
                                 tibex:group="groupStart" tibex:xpdlId="f2bca438-b541-4e57-b017-b1e6486a0d67">
@@ -1304,7 +1448,7 @@
                                     tibex:group="groupEnd"
                                     tibex:xpdlId="4d6b1bb0-b8c3-4300-8047-d055a4499bdb" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="AssignToGroupEnd"/>
+                                    <bpws:target linkName="CSV_viro_requestsToAccumulate"/>
                                     </bpws:targets>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1339,7 +1483,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0e455400-7bf1-4f18-8392-5ec91b2e7c49+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns1:jdbcQueryActivityInput>&lt;subsetSize>&lt;xsl:value-of select=&quot;10&quot;/>&lt;/subsetSize>&lt;/tns1:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0e455400-7bf1-4f18-8392-5ec91b2e7c49+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns1:jdbcQueryActivityInput>&lt;subsetSize>&lt;xsl:value-of select=&quot;5&quot;/>&lt;/subsetSize>&lt;/tns1:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1351,7 +1495,7 @@
                                     <properties
                                     name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
-                                    <value maxRows="50"
+                                    <value maxRows="20"
                                     processInSubsets="true"
                                     sharedResourceProperty="jdbcProperty"
                                     sqlStatement="SELECT cd_incrementale_richiesta,cd_codice_pod,cd_codice_meter&#xd;&#xa;  FROM datl_distrib.fnc_distrib_lista_pod_meter&#xd;&#xa;"
@@ -1385,7 +1529,7 @@
                                     <bpws:target linkName="JDBCQueryToGroupEnd"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="AssignToGroupEnd"/>
+                                    <bpws:source linkName="AssignToJMS_viro_requests"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
@@ -1408,6 +1552,46 @@
                                     </bwext:BWActivity>
                                     </tibex:config>
                                 </tibex:activityExtension>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    inputVariable="JMS_viro_requests-input"
+                                    name="JMS_viro_requests"
+                                    tibex:xpdlId="67e42087-1f1a-4dd1-b769-952d04a6f24f"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="AssignToJMS_viro_requests"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="JMS_viro_requestsToCSV_viro_requests"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.iren.it/JMS_viro_requests/v1&quot; xmlns:to=&quot;http://twobeat.enel.com/enterviro/types/1.0&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:param name=&quot;period&quot;/>&lt;xsl:template name=&quot;JMS_viro_requests-input&quot; match=&quot;/&quot;>&lt;tns3:RequestJMS>&lt;to:enterViroRequestList>&lt;xsl:attribute name=&quot;to:requestListIdentifier&quot;>&lt;xsl:value-of select=&quot;&amp;quot;VIRO1&amp;quot;&quot;/>&lt;/xsl:attribute>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;to:enterViroRequest>&lt;xsl:attribute name=&quot;to:itemId&quot;>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:meterSerialNumber&quot;>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:period&quot;>&lt;xsl:value-of select=&quot;$period&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:requestId&quot;>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:supplyPointId&quot;>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/xsl:attribute>&lt;/to:enterViroRequest>&lt;/xsl:for-each>&lt;/to:enterViroRequestList>&lt;/tns3:RequestJMS>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.iten.xx.integration.JMS_viro_requests" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    inputVariable="CSV_viro_requests-input"
+                                    name="CSV_viro_requests"
+                                    tibex:xpdlId="4b300585-d9d2-4a95-8952-08ba0669dd71"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="JMS_viro_requestsToCSV_viro_requests"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="CSV_viro_requestsToAccumulate"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;CSV_viro_requests-input&quot; match=&quot;/&quot;>&lt;tns2:RequestJMS>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;tns2:Records>&lt;xsl:if test=&quot;cd_incrementale_richiesta&quot;>&lt;tns2:cd_incrementale_richiesta>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/tns2:cd_incrementale_richiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_pod&quot;>&lt;tns2:cd_codice_pod>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/tns2:cd_codice_pod>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_meter&quot;>&lt;tns2:cd_codice_meter>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/tns2:cd_codice_meter>&lt;/xsl:if>&lt;/tns2:Records>&lt;/xsl:for-each>&lt;tns2:index>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/tns2:index>&lt;/tns2:RequestJMS>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="it.iten.xx.integration.CSV_viro_requests" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
                             </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:while>

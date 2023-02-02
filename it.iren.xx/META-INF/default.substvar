@@ -98,6 +98,22 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/period</name>
+			<value>1</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/path</name>
+			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//it.iren.xx.module///Connections/PostgresDB/drivers</name>
 			<value>tibcosoftwareinc.jdbc.postgresql.PostgreSQLDriver</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -127,6 +143,14 @@
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Password</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///Connections/PostgresDB/timeout</name>
+			<value>60</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
