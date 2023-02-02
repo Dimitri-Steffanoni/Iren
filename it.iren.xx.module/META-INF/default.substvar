@@ -122,8 +122,16 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/JMSQueues/newProperty</name>
-			<value></value>
+			<name>/ApplicationConfigurations/JMSQueues/IREN-1/viro_request</name>
+			<value>viroRequest</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/JMSQueues/IREN-2/viroResponse</name>
+			<value>viroResponse</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -146,7 +154,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/path</name>
+			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -156,6 +164,22 @@
 		<globalVariable>
 			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/period</name>
 			<value>1</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/filename</name>
+			<value>_viro_request.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

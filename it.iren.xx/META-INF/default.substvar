@@ -74,14 +74,6 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/newProperty</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
 			<name>//it.iren.xx.module///ApplicationConfigurations/PostgresDB/SubsetRecords</name>
 			<value>1000</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -106,8 +98,40 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/path</name>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/filename</name>
+			<value>_viro_request.csv</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-1/viro_request</name>
+			<value>viroRequest</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-2/viroResponse</name>
+			<value>viroResponse</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

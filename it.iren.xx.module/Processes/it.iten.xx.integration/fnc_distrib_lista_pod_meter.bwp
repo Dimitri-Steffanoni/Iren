@@ -834,7 +834,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="121"
-                                    width="619"
+                                    width="631"
                                     x="15"
                                     xsi:type="notation:Bounds" y="20"/>
                                     </children>
@@ -925,7 +925,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
-                                    height="165" width="659"
+                                    height="165" width="671"
                                     x="297"
                                     xsi:type="notation:Bounds" y="52"/>
                                     </children>
@@ -1177,6 +1177,18 @@
             <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@links/@children.4"/>
             <bendpoints points="[25, 0, -166, 0]$[179, 0, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@links/@children.5"/>
+            <bendpoints
+                points="[4, -24, -542, -24]$[4, -40, -542, -40]$[483, -40, -63, -40]$[483, -6, -63, -6]$[534, -6, -12, -6]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1396,7 +1408,8 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="While" tibex:group="while" tibex:xpdlId="fba533df-102f-4eed-9156-df08a806318b">
+            <bpws:scope name="While" tibex:group="while"
+                tibex:indexToGlobal="false" tibex:xpdlId="fba533df-102f-4eed-9156-df08a806318b">
                 <bpws:targets>
                     <bpws:target linkName="StartLogToWhile"/>
                 </bpws:targets>
@@ -1427,13 +1440,14 @@
                         <bpws:flow name="flow2">
                             <bpws:links>
                                 <bpws:link name="GroupStartToJDBCQuery" tibex:linkType="SUCCESS"/>
-                                <bpws:link name="JDBCQueryToGroupEnd" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="JDBCQueryToGroupEnd" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                                 <bpws:link
                                     name="AssignToJMS_viro_requests" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="JMS_viro_requestsToCSV_viro_requests" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="CSV_viro_requestsToAccumulate" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="JDBCQueryToAccumulate" tibex:linkType="SUCCESSWITHCONDITION"/>
                             </bpws:links>
                             <bpws:empty name="GroupStart"
                                 tibex:group="groupStart" tibex:xpdlId="f2bca438-b541-4e57-b017-b1e6486a0d67">
@@ -1449,6 +1463,7 @@
                                     tibex:xpdlId="4d6b1bb0-b8c3-4300-8047-d055a4499bdb" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
                                     <bpws:target linkName="CSV_viro_requestsToAccumulate"/>
+                                    <bpws:target linkName="JDBCQueryToAccumulate"/>
                                     </bpws:targets>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1479,7 +1494,20 @@
                                     <bpws:target linkName="GroupStartToJDBCQuery"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="JDBCQueryToGroupEnd"/>
+                                    <bpws:source linkName="JDBCQueryToGroupEnd">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="JDBCQueryToAccumulate">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="not(exists($JDBCQuery/Record[1]))" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[not(exists($JDBCQuery/Record[1]))]]></bpws:transitionCondition>
+                                    </bpws:source>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
@@ -1567,7 +1595,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.iren.it/JMS_viro_requests/v1&quot; xmlns:to=&quot;http://twobeat.enel.com/enterviro/types/1.0&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:param name=&quot;period&quot;/>&lt;xsl:template name=&quot;JMS_viro_requests-input&quot; match=&quot;/&quot;>&lt;tns3:RequestJMS>&lt;to:enterViroRequestList>&lt;xsl:attribute name=&quot;to:requestListIdentifier&quot;>&lt;xsl:value-of select=&quot;&amp;quot;VIRO1&amp;quot;&quot;/>&lt;/xsl:attribute>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;to:enterViroRequest>&lt;xsl:attribute name=&quot;to:itemId&quot;>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:meterSerialNumber&quot;>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:period&quot;>&lt;xsl:value-of select=&quot;$period&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:requestId&quot;>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:supplyPointId&quot;>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/xsl:attribute>&lt;/to:enterViroRequest>&lt;/xsl:for-each>&lt;/to:enterViroRequestList>&lt;/tns3:RequestJMS>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.iren.it/JMS_viro_requests/v1&quot; xmlns:to=&quot;http://twobeat.enel.com/enterviro/types/1.0&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:param name=&quot;period&quot;/>&lt;xsl:template name=&quot;JMS_viro_requests-input&quot; match=&quot;/&quot;>&lt;tns3:RequestJMS>&lt;to:enterViroRequestList>&lt;xsl:attribute name=&quot;to:requestListIdentifier&quot;>&lt;xsl:value-of select=&quot;&amp;quot;VIRO1&amp;quot;&quot;/>&lt;/xsl:attribute>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;to:enterViroRequest>&lt;xsl:attribute name=&quot;to:meterSerialNumber&quot;>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:period&quot;>&lt;xsl:value-of select=&quot;$period&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:requestId&quot;>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:supplyPointId&quot;>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/xsl:attribute>&lt;xsl:attribute name=&quot;to:itemId&quot;>&lt;xsl:value-of select=&quot;xsd:long(position())&quot;/>&lt;/xsl:attribute>&lt;/to:enterViroRequest>&lt;/xsl:for-each>&lt;/to:enterViroRequestList>&lt;/tns3:RequestJMS>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="it.iten.xx.integration.JMS_viro_requests" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
@@ -1587,7 +1615,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;CSV_viro_requests-input&quot; match=&quot;/&quot;>&lt;tns2:RequestJMS>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;tns2:Records>&lt;xsl:if test=&quot;cd_incrementale_richiesta&quot;>&lt;tns2:cd_incrementale_richiesta>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/tns2:cd_incrementale_richiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_pod&quot;>&lt;tns2:cd_codice_pod>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/tns2:cd_codice_pod>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_meter&quot;>&lt;tns2:cd_codice_meter>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/tns2:cd_codice_meter>&lt;/xsl:if>&lt;/tns2:Records>&lt;/xsl:for-each>&lt;tns2:index>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/tns2:index>&lt;/tns2:RequestJMS>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:template name=&quot;CSV_viro_requests-input&quot; match=&quot;/&quot;>&lt;tns2:RequestJMS>&lt;xsl:for-each select=&quot;$JDBCQuery/Record&quot;>&lt;tns2:Records>&lt;xsl:if test=&quot;cd_incrementale_richiesta&quot;>&lt;tns2:cd_incrementale_richiesta>&lt;xsl:value-of select=&quot;cd_incrementale_richiesta&quot;/>&lt;/tns2:cd_incrementale_richiesta>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_pod&quot;>&lt;tns2:cd_codice_pod>&lt;xsl:value-of select=&quot;cd_codice_pod&quot;/>&lt;/tns2:cd_codice_pod>&lt;/xsl:if>&lt;xsl:if test=&quot;cd_codice_meter&quot;>&lt;tns2:cd_codice_meter>&lt;xsl:value-of select=&quot;cd_codice_meter&quot;/>&lt;/tns2:cd_codice_meter>&lt;/xsl:if>&lt;/tns2:Records>&lt;/xsl:for-each>&lt;tns2:index>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/tns2:index>&lt;/tns2:RequestJMS>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="it.iten.xx.integration.CSV_viro_requests" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>

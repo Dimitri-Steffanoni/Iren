@@ -15,12 +15,18 @@
   <sca:property xmi:id="_gpiPAKJGEe2fosf3ckLo5w" name="/Connections/PostgresDB/url" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_b3NksKLkEe2PDIDqqsNKWg" name="/Connections/PostgresDB/timeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_aL1y0KJGEe2fosf3ckLo5w" name="/Connections/JMS/Enel/url" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_oue84KJGEe2fosf3ckLo5w" name="/ApplicationConfigurations/JMSQueues/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__xxjAKLuEe2PDIDqqsNKWg" name="/ApplicationConfigurations/JMSQueues/IREN-1/viro_request" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_eun7EKMCEe2PDIDqqsNKWg" name="/ApplicationConfigurations/JMSQueues/IREN-2/viroResponse" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_tsLl8KJGEe2fosf3ckLo5w" name="/ApplicationConfigurations/PostgresDB/SubsetRecords" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_26RGIKJGEe2fosf3ckLo5w" name="/ApplicationConfigurations/PostgresDB/Submissions" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_Qw9wYKLhEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Qw9wYKLhEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_VfQEcKLhEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_05VfMKMBEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5Cj-YKMBEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_8TkikKJFEe2fosf3ckLo5w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.xx.main.RecordsDispatcher"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.xx.main.IREN-1"/>
+  </sca:component>
+  <sca:component xmi:id="_0-pNEKLtEe2PDIDqqsNKWg" name="ComponentIREN-2" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_0-pNEaLtEe2PDIDqqsNKWg" processName="it.iren.xx.main.IREN-2"/>
   </sca:component>
 </sca:composite>
