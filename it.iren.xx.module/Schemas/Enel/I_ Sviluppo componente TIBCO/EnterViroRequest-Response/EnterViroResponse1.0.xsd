@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:to="http://twobeat.enel.com/enterviro/types/1.0" targetNamespace="http://twobeat.enel.com/enterviro/types/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+   	<xs:attribute name="requestListIdentifier">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="36"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="replyId">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="36"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="itemId">
+		<xs:simpleType>
+			<xs:restriction base="xs:long"/>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="company">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[a-zA-Z0-9_ ]{1,16}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>	
+	<xs:attribute name="responseStatus">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="OK"/>
+				<xs:enumeration value="FAILED"/>
+				<xs:enumeration value="ERROR"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="result">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="OK"/>
+				<xs:enumeration value="FAILED"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+    <xs:attribute name = "errorCode">
+        <xs:simpleType>
+            <xs:restriction base = "xs:string">
+                <xs:length value = "4"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+	<xs:attribute name="informationAboutTheError" type="xs:string"/>	
+	<xs:attribute name="errorReason" type="xs:string"/>
+	<xs:element name="enterViroResponseList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="enterViroResponse" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+						<xs:attribute ref="to:replyId" use="required"/>
+						<xs:attribute ref="to:itemId" use="required"/>
+						<xs:attribute ref="to:result" use="required"/>
+						<xs:attribute ref="to:errorCode" use="optional"/>
+						<xs:attribute ref="to:errorReason" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        	<xs:attribute ref="to:requestListIdentifier" use="required"/>
+			<xs:attribute ref="to:company" use="optional"/>
+			<xs:attribute ref="to:responseStatus" use="required"/>
+			<xs:attribute ref="to:informationAboutTheError" use="optional"/>
+        </xs:complexType>
+		<xs:unique name="iViroItemId">
+			<xs:selector xpath="to:enterViroResponse"/>
+			<xs:field xpath="@to:replyId"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>

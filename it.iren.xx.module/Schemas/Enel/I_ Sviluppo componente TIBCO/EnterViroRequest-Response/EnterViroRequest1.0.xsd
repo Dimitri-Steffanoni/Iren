@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:to="http://twobeat.enel.com/enterviro/types/1.0" targetNamespace="http://twobeat.enel.com/enterviro/types/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attribute name="requestListIdentifier">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="36"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="company">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[a-zA-Z0-9_ ]{1,16}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="requestId">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="36"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="itemId">
+		<xs:simpleType>
+			<xs:restriction base="xs:long"/>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="meterSerialNumber" type="xs:string"/>
+	<xs:attribute name="supplyPointId">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[A-Z0-9_]{1,32}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="period">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="1"/>
+				<xs:enumeration value="C"/>
+				<xs:enumeration value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:element name="enterViroRequestList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="enterViroRequest" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute ref="to:requestId" use="required"/>
+						<xs:attribute ref="to:itemId" use="required"/>
+						<xs:attribute ref="to:supplyPointId" use="required"/>				
+						<xs:attribute ref="to:meterSerialNumber" use="required"/>
+						<xs:attribute ref="to:period" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="to:requestListIdentifier" use="required"/>
+			<xs:attribute ref="to:company" use="optional"/>
+		</xs:complexType>
+		<xs:unique name="iViroItemId">
+			<xs:selector xpath="to:enterViroRequest"/>
+			<xs:field xpath="@to:itemId"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>
