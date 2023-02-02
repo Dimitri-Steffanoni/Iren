@@ -122,6 +122,30 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-2/working_folder_path</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-2/root_path</name>
+			<value>C:\Users\user\Desktop\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-2/filename</name>
+			<value>_viro_response.csv</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-1/viro_request</name>
 			<value>viroRequest</value>
 			<deploymentSettable>false</deploymentSettable>

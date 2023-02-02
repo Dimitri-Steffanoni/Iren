@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.iren.it/CSV_viro_Response" elementFormDefault="qualified" targetNamespace="http://www.iren.it/CSV_viro_Response">
+
+    <element name="RowCSV" type="tns:RowCSVType"></element>
+    
+    <complexType name="RowCSVType">
+    	<sequence>
+            <element name="company" type="string" minOccurs="0"></element>
+            <element name="informationAboutTheError" type="string" minOccurs="0"></element>
+            <element name="requestListIdentifier" type="string" minOccurs="0"></element>
+    		<element name="responseStatus" type="string" minOccurs="0"></element>
+            <element name="errorCode" type="string" minOccurs="0"></element>
+            <element name="errorReason" type="string" minOccurs="0"></element>
+            <element name="itemId" type="string" minOccurs="0"></element>
+            <element name="replyId" type="string" minOccurs="0"></element>
+    		<element name="result" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="RowsCSV" type="tns:RowsCSVType"></element>
+    
+    <complexType name="RowsCSVType">
+    	<sequence>
+    		<element name="Row" type="tns:RowCSVType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>
