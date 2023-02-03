@@ -36,6 +36,11 @@
   <sca:property xmi:id="_6eSI8KMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_-_gRYKMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="__CCA8KMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5eluoKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_6fr_QKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_6iBhkKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/list_files" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9aQ6AKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/move_to" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_csJWoKOqEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_8TkikKJFEe2fosf3ckLo5w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.xx.main.IREN-1"/>
   </sca:component>
@@ -50,5 +55,8 @@
   </sca:component>
   <sca:component xmi:id="_17CnQKMWEe2uWarWeIOmXg" name="ComponentCSV_viro_publish_samples" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_17CnQaMWEe2uWarWeIOmXg" processName="it.iten.xx.integration.CSV_viro_publish_samples"/>
+  </sca:component>
+  <sca:component xmi:id="_DAx6wKOhEe2TCq1TR8r07w" name="ComponentIREN-4" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_DAx6waOhEe2TCq1TR8r07w" processName="it.iren.xx.main.IREN-4"/>
   </sca:component>
 </sca:composite>
