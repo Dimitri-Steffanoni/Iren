@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: It Iren Xx
-Bundle-SymbolicName: it.iren.xx
+Bundle-Name: It Iren twobeat_estrazioni_viro_vvro
+Bundle-SymbolicName: it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.application
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-Version: 6.5.1 V9 2019-02-06

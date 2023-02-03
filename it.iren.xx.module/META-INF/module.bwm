@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_77px0KJFEe2fosf3ckLo5w" targetNamespace="http://tns.tibco.com/bw/composite/it.iren.xx.module" name="it.iren.xx.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_77px0KJFEe2fosf3ckLo5w" targetNamespace="http://tns.tibco.com/bw/composite/it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro" name="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro" compositeext:version="1.0.0" compositeext:formatVersion="2">
   <sca:property xmi:id="_8lPhYKJFEe2fosf3ckLo5w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_8licUKJFEe2fosf3ckLo5w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_8licUaJFEe2fosf3ckLo5w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -42,21 +42,15 @@
   <sca:property xmi:id="_9aQ6AKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/move_to" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_csJWoKOqEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_8TkikKJFEe2fosf3ckLo5w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.xx.main.IREN-1"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-1"/>
   </sca:component>
   <sca:component xmi:id="_0-pNEKLtEe2PDIDqqsNKWg" name="ComponentIREN-2" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_0-pNEaLtEe2PDIDqqsNKWg" processName="it.iren.xx.main.IREN-2"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_0-pNEaLtEe2PDIDqqsNKWg" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-2"/>
   </sca:component>
   <sca:component xmi:id="_Ub2s8KMREe2uWarWeIOmXg" name="ComponentIREN-3" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ub3UAKMREe2uWarWeIOmXg" processName="it.iren.xx.main.IREN-3"/>
-  </sca:component>
-  <sca:component xmi:id="_zZgeoKMWEe2uWarWeIOmXg" name="ComponentCSV_viro_publish_summary" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zZgeoaMWEe2uWarWeIOmXg" processName="it.iten.xx.integration.CSV_viro_publish_summary"/>
-  </sca:component>
-  <sca:component xmi:id="_17CnQKMWEe2uWarWeIOmXg" name="ComponentCSV_viro_publish_samples" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_17CnQaMWEe2uWarWeIOmXg" processName="it.iten.xx.integration.CSV_viro_publish_samples"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ub3UAKMREe2uWarWeIOmXg" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-3"/>
   </sca:component>
   <sca:component xmi:id="_DAx6wKOhEe2TCq1TR8r07w" name="ComponentIREN-4" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_DAx6waOhEe2TCq1TR8r07w" processName="it.iren.xx.main.IREN-4"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_DAx6waOhEe2TCq1TR8r07w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-4"/>
   </sca:component>
 </sca:composite>

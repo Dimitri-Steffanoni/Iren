@@ -2,7 +2,7 @@
 <repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
 	<globalVariables>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.DEPLOYMENTUNIT.TYPE</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.DEPLOYMENTUNIT.TYPE</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -10,7 +10,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.APPNODE.NAME</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.APPNODE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -18,7 +18,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.DEPLOYMENTUNIT.NAME</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.DEPLOYMENTUNIT.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -26,7 +26,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.HOST.NAME</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.HOST.NAME</name>
 			<value>localhost</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -34,7 +34,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.DOMAIN.NAME</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.DOMAIN.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -42,7 +42,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.DEPLOYMENTUNIT.VERSION</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.DEPLOYMENTUNIT.VERSION</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -50,7 +50,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.APPSPACE.NAME</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.APPSPACE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -58,7 +58,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.MODULE.VERSION</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.MODULE.VERSION</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -66,7 +66,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module//BW.MODULE.NAME</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro//BW.MODULE.NAME</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -74,7 +74,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/PostgresDB/SubsetRecords</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/PostgresDB/SubsetRecords</name>
 			<value>1000</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -82,7 +82,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/PostgresDB/Submissions</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/PostgresDB/Submissions</name>
 			<value>3</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -90,7 +90,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/period</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/period</name>
 			<value>1</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -98,7 +98,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -106,7 +106,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -114,7 +114,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/Dispatcher/filename</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/filename</name>
 			<value>_viro_request.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -122,7 +122,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-2/working_folder_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-2/working_folder_path</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -130,7 +130,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-2/root_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-2/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -138,7 +138,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-2/filename</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-2/filename</name>
 			<value>_viro_response.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -146,7 +146,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/root_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -154,7 +154,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/working_folder_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/working_folder_path</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -162,7 +162,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/filename</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/filename</name>
 			<value>_viro_publish.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -170,7 +170,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/filename</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/filename</name>
 			<value>_viro_publish_summary.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -178,7 +178,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/root_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -186,7 +186,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/working_folder_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/working_folder_path</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -194,7 +194,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path</name>
 			<value>C:\Users\user\Desktop\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -202,7 +202,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -210,7 +210,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename</name>
 			<value>_viro_publish_samples.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -218,7 +218,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-4/working_folder_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-4/working_folder_path</name>
 			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -226,7 +226,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-4/move_to</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-4/move_to</name>
 			<value>C:\Users\user\Desktop\there</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -234,7 +234,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-4/list_files</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-4/list_files</name>
 			<value>*.csv</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -242,7 +242,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-4/root_path</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-4/root_path</name>
 			<value>C:\Users\user\Desktop\here</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -250,7 +250,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator</name>
 			<value>\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -258,7 +258,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-1/viro_request</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/JMSQueues/IREN-1/viro_request</name>
 			<value>viroRequest</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -266,7 +266,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-2/viroResponse</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/JMSQueues/IREN-2/viroResponse</name>
 			<value>viroResponse</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -274,7 +274,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///ApplicationConfigurations/JMSQueues/IREN-3/queue</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/JMSQueues/IREN-3/queue</name>
 			<value>publishViro</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -282,7 +282,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///Connections/PostgresDB/drivers</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/PostgresDB/drivers</name>
 			<value>tibcosoftwareinc.jdbc.postgresql.PostgreSQLDriver</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -290,7 +290,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///Connections/PostgresDB/user</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/PostgresDB/user</name>
 			<value>postgres</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -298,7 +298,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///Connections/PostgresDB/url</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/PostgresDB/url</name>
 			<value>jdbc:tibcosoftwareinc:postgresql://192.168.1.128:5432;DatabaseName=postgres</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -306,7 +306,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///Connections/PostgresDB/password</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/PostgresDB/password</name>
 			<value>#!FL2lh1bEgxbRrExelkvvSNBGl6Y2qhFAQXsEYWVA3hE=</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -314,7 +314,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///Connections/PostgresDB/timeout</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/PostgresDB/timeout</name>
 			<value>60</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
@@ -322,7 +322,7 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>//it.iren.xx.module///Connections/JMS/Enel/url</name>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/JMS/Enel/url</name>
 			<value>tcp://192.168.1.128:7222</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
