@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.iren.it/JMS_viro_requests/v1"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.iren.it/JMS_viro_requests/v1" xmlns:to="http://twobeat.enel.com/enterviro/types/1.0">
+
+	<import schemaLocation="../Enel/I_ Sviluppo componente TIBCO/EnterViroRequest-Response/EnterViroRequest1.0.xsd" namespace="http://twobeat.enel.com/enterviro/types/1.0"></import>
+	<element name="RequestJMS" type="tns:RequestJMSType"></element>
+
+	<complexType name="RequestJMSType">
+		<sequence>
+			<element ref="to:enterViroRequestList"></element>
+		</sequence>
+	</complexType>
+</schema>

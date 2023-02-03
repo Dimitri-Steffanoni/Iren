@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.iren.it/CSV_viro_requests/v1" elementFormDefault="qualified" targetNamespace="http://www.iren.it/CSV_viro_requests/v1">
+
+    <element name="ViroCsvRow" type="tns:ViroCsvRowType"></element>
+    
+    <complexType name="ViroCsvRowType">
+    	<sequence>
+    		<element name="requestId" type="string" minOccurs="0"></element>
+    		<element name="supplyPointId" type="string" minOccurs="0"></element>
+    		<element name="meterSerialNumber" type="string" minOccurs="0"></element>
+    		<element name="itemId" type="string" minOccurs="0"></element>
+    		<element name="period" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

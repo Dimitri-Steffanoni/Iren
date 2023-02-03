@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:to="http://twobeat.enel.com/publishviro/types/1.1" targetNamespace="http://twobeat.enel.com/publishviro/types/1.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attribute name="responseListIdentifier">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="36"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>	
+	<xs:attribute name="itemId">
+		<xs:simpleType>
+			<xs:restriction base="xs:long"/>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="replyId">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="36"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="company">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[a-zA-Z0-9_ ]{1,16}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>	
+	<xs:attribute name="numberOfRecords" type="xs:int"/>	
+	<xs:attribute name="meterSerialNumber" type="xs:string"/>
+	<xs:attribute name="invertedPhaseFlag"   type="xs:boolean"/>
+	<xs:attribute name="phase" type="xs:string"/>
+	<xs:attribute name="supplyPointId">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[A-Z0-9]{1,32}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="status">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+				<xs:enumeration value="EXE"/>
+				<xs:enumeration value="ERR"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="result">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="OK"/>
+				<xs:enumeration value="FAILED"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="errorCode">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:length value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="errorReason" type="xs:string"/>
+	<xs:attribute name="currentDate" type="xs:dateTime"/>
+	<xs:attribute name="readingDate" type="xs:dateTime"/>
+	<xs:attribute name="startPeriodDate" type="xs:dateTime"/>
+	<xs:attribute name="endPeriodDate" type="xs:dateTime"/>
+	<xs:attribute name="ntvd" type="xs:int"/>
+	<xs:attribute name="tshv" type="xs:long"/>
+	<xs:attribute name="tavv" type="xs:long"/>
+	<xs:attribute name="tlov" type="xs:long"/>
+	<xs:attribute name="nshv" type="xs:int"/>
+	<xs:attribute name="navv" type="xs:int"/>
+	<xs:attribute name="nlov" type="xs:int"/>
+	<xs:attribute name="type">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="VI"/>
+				<xs:pattern value="PF"/>
+				<xs:enumeration value="VI"/>
+				<xs:enumeration value="PF"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="dateTime" type="xs:dateTime"/>
+	<xs:attribute name="duration" type="xs:long"/>
+	<xs:complexType name="voltageInterruptionEvent">
+		<xs:attribute ref="to:type" use="required"/>
+		<xs:attribute ref="to:dateTime" use="required"/>
+		<xs:attribute ref="to:duration" use="required"/>
+	</xs:complexType>
+	<xs:attribute name="timestamp" type="xs:dateTime"/>
+	<xs:element name="publishViroList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="publishViro" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="phaseR" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="voltageInterruptionEvent" type="to:voltageInterruptionEvent" minOccurs="0" maxOccurs="20" />
+									</xs:sequence>
+									<xs:attribute ref="to:phase" use="required"/>
+									<xs:attribute ref="to:invertedPhaseFlag" use="required"/>
+									<xs:attribute ref="to:tshv" use="required"/>
+									<xs:attribute ref="to:tavv" use="required"/>
+									<xs:attribute ref="to:tlov" use="required"/>
+									<xs:attribute ref="to:nshv" use="required"/>
+									<xs:attribute ref="to:navv" use="required"/>
+									<xs:attribute ref="to:nlov" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="phaseS" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="voltageInterruptionEvent"  type="to:voltageInterruptionEvent" minOccurs="0" maxOccurs="20" />
+									</xs:sequence>
+									<xs:attribute ref="to:phase" use="required"/>
+									<xs:attribute ref="to:invertedPhaseFlag" use="required"/>
+									<xs:attribute ref="to:tshv" use="required"/>
+									<xs:attribute ref="to:tavv" use="required"/>
+									<xs:attribute ref="to:tlov" use="required"/>
+									<xs:attribute ref="to:nshv" use="required"/>
+									<xs:attribute ref="to:navv" use="required"/>
+									<xs:attribute ref="to:nlov" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="phaseT" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="voltageInterruptionEvent"  type="to:voltageInterruptionEvent" minOccurs="0" maxOccurs="20" />
+									</xs:sequence>
+									<xs:attribute ref="to:phase" use="required"/>
+									<xs:attribute ref="to:invertedPhaseFlag" use="required"/>
+									<xs:attribute ref="to:tshv" use="required"/>
+									<xs:attribute ref="to:tavv" use="required"/>
+									<xs:attribute ref="to:tlov" use="required"/>
+									<xs:attribute ref="to:nshv" use="required"/>
+									<xs:attribute ref="to:navv" use="required"/>
+									<xs:attribute ref="to:nlov" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute ref="to:itemId" use="required"/>
+						<xs:attribute ref="to:replyId" use="required"/>
+						<xs:attribute ref="to:supplyPointId" use="required"/>
+						<xs:attribute ref="to:meterSerialNumber" use="required"/>
+						<xs:attribute ref="to:status" use="required"/>
+						<xs:attribute ref="to:readingDate" use="optional"/>
+						<xs:attribute ref="to:startPeriodDate" use="optional"/>
+						<xs:attribute ref="to:endPeriodDate" use="optional"/>
+						<xs:attribute ref="to:ntvd"/>
+						<xs:attribute ref="to:result" use="required"/>
+						<xs:attribute ref="to:errorCode" use="optional"/>
+						<xs:attribute ref="to:errorReason" use="optional"/>
+						<xs:attribute ref="to:timestamp" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="to:responseListIdentifier" use="required"/>
+			<xs:attribute ref="to:numberOfRecords" use="required"/>
+			<xs:attribute ref="to:currentDate" use="required"/>
+			<xs:attribute ref="to:company" use="optional"/>
+		</xs:complexType>
+		<xs:unique name="iViroItemId">
+			<xs:selector xpath="to:publishViro"/>
+			<xs:field xpath="@to:itemId"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:v1="http://www.iren.it/CSV_viro_publish/v1" xmi:id="_yKva4aMVEe2uWarWeIOmXg" name="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.Dataformat.viroPublishSummary" type="dataformat:DataFormat">
+  <imports xmi:id="_5XiYwKMVEe2uWarWeIOmXg" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/CSV_viro_publish/v1"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_yKva4qMVEe2uWarWeIOmXg" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="v1:viroPublishSummaryRow" fieldOffsetsStr="itemId(0,0)&#xA;replyId(0,0)&#xA;supplyPointId(0,0)&#xA;meterSerialNumber(0,0)&#xA;phaseElement(0,0)&#xA;phase(0,0)&#xA;invertedPhaseFlag(0,0)&#xA;tshv(0,0)&#xA;tavv(0,0)&#xA;tlov(0,0)&#xA;nshv(0,0)&#xA;navv(0,0)&#xA;nlov(0,0)&#xA;messageUnqueueTime(0,0)">
+    <fieldOffsets xmi:id="_5bBxoKMVEe2uWarWeIOmXg" name="itemId"/>
+    <fieldOffsets xmi:id="_5bBxoaMVEe2uWarWeIOmXg" name="replyId"/>
+    <fieldOffsets xmi:id="_5bBxoqMVEe2uWarWeIOmXg" name="supplyPointId"/>
+    <fieldOffsets xmi:id="_5bBxo6MVEe2uWarWeIOmXg" name="meterSerialNumber"/>
+    <fieldOffsets xmi:id="_5bBxpKMVEe2uWarWeIOmXg" name="phaseElement"/>
+    <fieldOffsets xmi:id="_5bBxpaMVEe2uWarWeIOmXg" name="phase"/>
+    <fieldOffsets xmi:id="_5bBxpqMVEe2uWarWeIOmXg" name="invertedPhaseFlag"/>
+    <fieldOffsets xmi:id="_5bBxp6MVEe2uWarWeIOmXg" name="tshv"/>
+    <fieldOffsets xmi:id="_5bBxqKMVEe2uWarWeIOmXg" name="tavv"/>
+    <fieldOffsets xmi:id="_5bBxqaMVEe2uWarWeIOmXg" name="tlov"/>
+    <fieldOffsets xmi:id="_5bBxqqMVEe2uWarWeIOmXg" name="nshv"/>
+    <fieldOffsets xmi:id="_5bBxq6MVEe2uWarWeIOmXg" name="navv"/>
+    <fieldOffsets xmi:id="_5bBxrKMVEe2uWarWeIOmXg" name="nlov"/>
+    <fieldOffsets xmi:id="_5bBxraMVEe2uWarWeIOmXg" name="messageUnqueueTime"/>
+  </jndi:configuration>
+</jndi:namedResource>
