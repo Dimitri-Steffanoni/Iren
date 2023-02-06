@@ -162,8 +162,16 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path</name>
-			<value>C:\Users\user\Desktop\</value>
+			<name>/ApplicationConfigurations/FlowConfiguration/root_path</name>
+			<value>C:\Users\user\Desktop\here\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/FlowConfiguration/working_folder_path</name>
+			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -178,32 +186,8 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
 			<name>/ApplicationConfigurations/FlowConfiguration/Dispatcher/filename</name>
 			<value>_viro_request.csv</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-2/root_path</name>
-			<value>C:\Users\user\Desktop\</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-2/working_folder_path</name>
-			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -218,22 +202,6 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/root_path</name>
-			<value>C:\Users\user\Desktop\</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/working_folder_path</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
 			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/filename</name>
 			<value>_viro_publish.csv</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -242,40 +210,8 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/root_path</name>
-			<value>C:\Users\user\Desktop\</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/working_folder_path</name>
-			<value></value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
 			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/filename</name>
 			<value>_viro_publish_summary.csv</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path</name>
-			<value>C:\Users\user\Desktop\</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-		</globalVariable>
-		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path</name>
-			<value></value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -322,11 +258,35 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
-			<name>/ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator</name>
-			<value>\</value>
+			<name>/ApplicationConfigurations/Scheduling/ViroRequests/startTime</name>
+			<value>2023-02-06T18:00:00.00+01:00</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/Scheduling/ViroRequests/timeIntervalHours</name>
+			<value>6</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/Scheduling/MoveViro/startTime</name>
+			<value>2023-02-06T18:00:00.00+01:00</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/ApplicationConfigurations/Scheduling/MoveViro/timeIntervalHours</name>
+			<value>6</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
 			<isOverride>false</isOverride>
 		</globalVariable>
 	</globalVariables>

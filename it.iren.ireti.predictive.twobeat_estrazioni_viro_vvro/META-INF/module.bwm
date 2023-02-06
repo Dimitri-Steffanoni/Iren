@@ -20,27 +20,22 @@
   <sca:property xmi:id="_rMfMIKMREe2uWarWeIOmXg" name="/ApplicationConfigurations/JMSQueues/IREN-3/queue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_tsLl8KJGEe2fosf3ckLo5w" name="/ApplicationConfigurations/PostgresDB/SubsetRecords" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_26RGIKJGEe2fosf3ckLo5w" name="/ApplicationConfigurations/PostgresDB/Submissions" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_Qw9wYKLhEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_f0wYcKY-Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/FlowConfiguration/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_f4K40KY-Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/FlowConfiguration/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_VfQEcKLhEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_05VfMKMBEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_5Cj-YKMBEe2PDIDqqsNKWg" name="/ApplicationConfigurations/FlowConfiguration/Dispatcher/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_A0GZUKMIEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-2/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_CVAycKMIEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-2/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_CYm5AKMIEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-2/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_6VQIwKMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_-YhJ4KMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_-bzucKMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_6ZtK8KMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_-sFmIKMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_-uxtwKMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_6eSI8KMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_-_gRYKMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="__CCA8KMWEe2uWarWeIOmXg" name="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_5eluoKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/root_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_6fr_QKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/working_folder_path" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_6iBhkKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/list_files" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_9aQ6AKOnEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/move_to" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_csJWoKOqEe2A_IfCP1P5MA" name="/ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WyimgKY9Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/Scheduling/ViroRequests/startTime" type="XMLSchema:dateTime" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_glVWQKY9Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/Scheduling/ViroRequests/timeIntervalHours" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_W07MIKY9Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/Scheduling/MoveViro/startTime" type="XMLSchema:dateTime" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_g-bywKY9Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/Scheduling/MoveViro/timeIntervalHours" type="XMLSchema:int" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_8TkikKJFEe2fosf3ckLo5w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-1"/>
   </sca:component>

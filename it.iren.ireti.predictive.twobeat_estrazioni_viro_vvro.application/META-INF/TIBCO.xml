@@ -136,20 +136,6 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/root_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/working_folder_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/Dispatcher/filename</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
@@ -158,20 +144,6 @@
     </packaging:property>
     <packaging:property>
       <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/JMSQueues/IREN-2/viroResponse</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-2/working_folder_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-2/root_path</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
@@ -192,28 +164,7 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/root_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/filename</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublish/working_folder_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/root_path</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
@@ -227,28 +178,7 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/working_folder_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
       <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/root_path</packaging:name>
-      <packaging:type>xsd:string</packaging:type>
-      <packaging:visibility>public</packaging:visibility>
-      <packaging:scalable>true</packaging:scalable>
-      <packaging:overrideValue>false</packaging:overrideValue>
-    </packaging:property>
-    <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSummary/working_folder_path</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
@@ -283,7 +213,42 @@
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/IREN-4/path_separator</packaging:name>
+      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/Scheduling/ViroRequests/timeIntervalHours</packaging:name>
+      <packaging:type>xsd:int</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/Scheduling/MoveViro/timeIntervalHours</packaging:name>
+      <packaging:type>xsd:int</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/Scheduling/ViroRequests/startTime</packaging:name>
+      <packaging:type>xsd:dateTime</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/Scheduling/MoveViro/startTime</packaging:name>
+      <packaging:type>xsd:dateTime</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/root_path</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///ApplicationConfigurations/FlowConfiguration/working_folder_path</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>public</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
