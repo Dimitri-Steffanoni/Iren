@@ -251,7 +251,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Move/move_to</name>
-			<value>C:\Users\user\Desktop\there</value>
+			<value>C:\Users\user\Desktop\there\</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
