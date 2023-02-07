@@ -1623,8 +1623,7 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="Iterate" tibex:group="iterate"
-                tibex:indexToGlobal="false" tibex:xpdlId="8c7d952f-1c8a-4ea1-8796-52012f19adb2">
+            <bpws:scope name="Iterate" tibex:group="iterate" tibex:xpdlId="8c7d952f-1c8a-4ea1-8796-52012f19adb2">
                 <bpws:targets>
                     <bpws:target linkName="ListFilesToIterate"/>
                 </bpws:targets>

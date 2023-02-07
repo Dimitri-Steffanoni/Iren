@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.operation.IREN-3_Orchestrator"
+    name="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.operation.IREN-VIRO-Publish_Orchestrator"
     suppressJoinFailure="yes"
     targetNamespace="http://xmlns.example.com/20230202165534"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"

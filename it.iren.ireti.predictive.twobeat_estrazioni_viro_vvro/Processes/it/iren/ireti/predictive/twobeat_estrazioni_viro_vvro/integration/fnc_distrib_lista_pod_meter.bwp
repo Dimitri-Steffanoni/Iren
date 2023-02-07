@@ -1512,8 +1512,7 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="While" tibex:group="while"
-                tibex:indexToGlobal="false" tibex:xpdlId="fba533df-102f-4eed-9156-df08a806318b">
+            <bpws:scope name="While" tibex:group="while" tibex:xpdlId="fba533df-102f-4eed-9156-df08a806318b">
                 <bpws:targets>
                     <bpws:target linkName="StartLogToWhile"/>
                 </bpws:targets>

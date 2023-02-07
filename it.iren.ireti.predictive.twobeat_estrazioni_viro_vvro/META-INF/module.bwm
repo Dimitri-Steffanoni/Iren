@@ -37,15 +37,15 @@
   <sca:property xmi:id="_W07MIKY9Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/Scheduling/MoveViro/startTime" type="XMLSchema:dateTime" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_g-bywKY9Ee2nrv7tHkwaQg" name="/ApplicationConfigurations/Scheduling/MoveViro/timeIntervalHours" type="XMLSchema:int" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_8TkikKJFEe2fosf3ckLo5w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-1"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8Tx98KJFEe2fosf3ckLo5w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-VIRO-Requests"/>
   </sca:component>
   <sca:component xmi:id="_0-pNEKLtEe2PDIDqqsNKWg" name="ComponentIREN-2" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_0-pNEaLtEe2PDIDqqsNKWg" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-2"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_0-pNEaLtEe2PDIDqqsNKWg" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-VIRO-Response"/>
   </sca:component>
   <sca:component xmi:id="_Ub2s8KMREe2uWarWeIOmXg" name="ComponentIREN-3" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ub3UAKMREe2uWarWeIOmXg" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-3"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Ub3UAKMREe2uWarWeIOmXg" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-VIRO-Publish"/>
   </sca:component>
   <sca:component xmi:id="_DAx6wKOhEe2TCq1TR8r07w" name="ComponentIREN-4" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_DAx6waOhEe2TCq1TR8r07w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-4"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_DAx6waOhEe2TCq1TR8r07w" processName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.main.IREN-VIRO-Move"/>
   </sca:component>
 </sca:composite>
