@@ -1303,13 +1303,13 @@
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable name="period" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Requests/period" type="xsd:string"/>
         <bpws:variable name="root_path" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/root_path" type="xsd:string"/>
         <bpws:variable name="filename" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/filename" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Requests/filename" type="xsd:string"/>
         <bpws:variable name="currentDate" type="xsd:string"/>
         <bpws:variable name="FullName" type="xsd:string"/>
         <bpws:variable name="folder" sca-bpel:hotUpdate="false"

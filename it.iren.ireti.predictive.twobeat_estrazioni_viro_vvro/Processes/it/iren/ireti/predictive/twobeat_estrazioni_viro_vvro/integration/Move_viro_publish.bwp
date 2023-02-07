@@ -1400,10 +1400,10 @@
             tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/working_folder_path" type="xsd:string"/>
         <bpws:variable name="filesname" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-4/list_files" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Move/list_files" type="xsd:string"/>
         <bpws:variable name="move_to" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-4/move_to" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Move/move_to" type="xsd:string"/>
         <bpws:variable element="ns0:ActivityInput"
             name="GenericLog-input" sca-bpel:internal="true"/>
     </bpws:variables>

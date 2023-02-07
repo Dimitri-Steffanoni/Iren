@@ -1349,7 +1349,7 @@
             name="CSV_viro_requests-input" sca-bpel:internal="true"/>
         <bpws:variable name="period" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Requests/period" type="xsd:string"/>
         <bpws:variable element="ns0:ActivityInput" name="Generic-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>

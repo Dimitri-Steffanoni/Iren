@@ -1113,7 +1113,7 @@
         </bpws:variable>
         <bpws:variable name="period" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/Dispatcher/period" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Requests/period" type="xsd:string"/>
         <bpws:variable element="ns5:RequestJMS" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable name="queue" sca-bpel:hotUpdate="false"

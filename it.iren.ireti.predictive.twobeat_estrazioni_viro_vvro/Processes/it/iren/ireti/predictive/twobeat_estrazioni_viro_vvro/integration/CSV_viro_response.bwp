@@ -1285,7 +1285,7 @@
             tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/root_path" type="xsd:string"/>
         <bpws:variable name="filename" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-2/filename" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Response/filename" type="xsd:string"/>
         <bpws:variable name="dataFormatResource"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"

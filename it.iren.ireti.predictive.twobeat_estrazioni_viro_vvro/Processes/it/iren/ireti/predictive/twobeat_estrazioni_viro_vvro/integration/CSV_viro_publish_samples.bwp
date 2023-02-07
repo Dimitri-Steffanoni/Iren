@@ -1298,7 +1298,7 @@
             tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/root_path" type="xsd:string"/>
         <bpws:variable name="filename" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
-            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-3/viroPublishSamples/filename" type="xsd:string"/>
+            tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Publish/viroPublishSamples/filename" type="xsd:string"/>
         <bpws:variable element="ns6:viroPublishSamplesRows" name="Start"
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns0:ActivityInput"
