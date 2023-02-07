@@ -282,6 +282,14 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/PostgresDB/MaximumRows</name>
+			<value>0</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro///Connections/JMS/Enel/url</name>
 			<value>tcp://192.168.1.128:7222</value>
 			<deploymentSettable>false</deploymentSettable>

@@ -1351,6 +1351,12 @@
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/IREN-VIRO-Requests/period" type="xsd:string"/>
         <bpws:variable element="ns0:ActivityInput" name="Generic-input" sca-bpel:internal="true"/>
+        <bpws:variable name="timeout" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/Connections/PostgresDB/timeout" type="xsd:int"/>
+        <bpws:variable name="MaximumRows" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/Connections/PostgresDB/MaximumRows" type="xsd:int"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1615,7 +1621,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0e455400-7bf1-4f18-8392-5ec91b2e7c49+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns1:jdbcQueryActivityInput>&lt;subsetSize>&lt;xsl:value-of select=&quot;5&quot;/>&lt;/subsetSize>&lt;/tns1:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+0e455400-7bf1-4f18-8392-5ec91b2e7c49+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SubsetSize&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns1:jdbcQueryActivityInput>&lt;subsetSize>&lt;xsl:value-of select=&quot;$SubsetSize&quot;/>&lt;/subsetSize>&lt;/tns1:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -1623,15 +1629,20 @@
                                     xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                                     xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                                     xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <attributeBindings
+                                    bindingType="moduleProperty"
+                                    eAttributeName="timeout" processProperty="timeout"/>
+                                    <attributeBindings
+                                    bindingType="moduleProperty"
+                                    eAttributeName="maxRows" processProperty="MaximumRows"/>
                                     <activityConfig>
                                     <properties
                                     name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
-                                    <value maxRows="20"
+                                    <value
                                     processInSubsets="true"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT cd_incrementale_richiesta,cd_codice_pod,cd_codice_meter&#xd;&#xa;  FROM datl_distrib.fnc_distrib_lista_pod_meter&#xd;&#xa;"
-                                    timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
+                                    sqlStatement="SELECT cd_incrementale_richiesta,cd_codice_pod,cd_codice_meter&#xd;&#xa;  FROM datl_distrib.fnc_distrib_lista_pod_meter&#xd;&#xa;" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <columnMetadata
                                     columnName="cd_incrementale_richiesta"
                                     dataType="-1"
