@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.iren.it/HeaderCheck" elementFormDefault="qualified" targetNamespace="http://www.iren.it/HeaderCheck">
+
+    <element name="fineName" type="string"></element>
+
+    <element name="check" type="boolean"></element>
+</schema>

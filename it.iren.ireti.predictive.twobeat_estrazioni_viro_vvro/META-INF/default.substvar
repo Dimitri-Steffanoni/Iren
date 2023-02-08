@@ -267,7 +267,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/ApplicationConfigurations/Scheduling/ViroRequests/startTime</name>
-			<value>2023-02-06T10:00:00+01:00</value>
+			<value>2023-02-06T00:05:00+01:00</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -275,7 +275,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/ApplicationConfigurations/Scheduling/ViroRequests/timeIntervalHours</name>
-			<value>6</value>
+			<value>24</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
@@ -283,7 +283,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/ApplicationConfigurations/Scheduling/MoveViro/startTime</name>
-			<value>2023-02-06T10:00:00+01:00</value>
+			<value>2023-02-06T00:05:00+01:00</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -291,7 +291,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/ApplicationConfigurations/Scheduling/MoveViro/timeIntervalHours</name>
-			<value>6</value>
+			<value>24</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>

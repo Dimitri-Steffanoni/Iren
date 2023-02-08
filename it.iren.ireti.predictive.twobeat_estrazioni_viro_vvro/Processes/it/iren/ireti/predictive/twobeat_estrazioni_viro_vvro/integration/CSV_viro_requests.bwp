@@ -13,6 +13,7 @@
     xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.renderdata"
     xmlns:ns5="http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input"
     xmlns:ns6="http://www.iren.it/fnc_distrib_lista_pod_meter/v1"
+    xmlns:ns7="http://www.iren.it/HeaderCheck"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -979,7 +980,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="372"
+                                    x="319"
                                     xsi:type="notation:Bounds" y="130"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.log">
@@ -1018,6 +1019,41 @@
                                     height="40" width="40"
                                     x="674"
                                     xsi:type="notation:Bounds" y="130"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint x="319"
+                                    xsi:type="notation:Bounds" y="27"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1235,8 +1271,8 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1246,15 +1282,27 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.7"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[-5, -24, 0, 73]$[0, -72, 5, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <bendpoints
+                points="[25, 0, -140, -103]$[165, 0, 0, -103]$[165, 79, 0, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1272,6 +1320,7 @@
             namespace="http://www.tibco.com/namespaces/tnt/plugins/file" prefix="tns4"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/fnc_distrib_lista_pod_meter/v1"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.iren.it/HeaderCheck"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1317,6 +1366,8 @@
             tibex:propertySource="/ApplicationConfigurations/FlowConfiguration/working_folder_path" type="xsd:string"/>
         <bpws:variable element="ns0:ActivityInput"
             name="GenericLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:fineName" name="Headers_Check-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:check" name="Headers_Check" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1374,8 +1425,9 @@
                 <bpws:link name="WriteFileToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log2ToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="AssignToRenderdata" tibex:linkType="SUCCESS"/>
-                <bpws:link name="Assign1ToRenderdata" tibex:linkType="SUCCESS"/>
                 <bpws:link name="LogToEndLog" tibex:linkType="SUCCESS"/>
+                <bpws:link name="SetFullnameToHeaders_Check" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Headers_CheckToRenderdata" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1483,14 +1535,14 @@
                     outputVariable="Renderdata"
                     tibex:xpdlId="43a10897-d301-437f-9191-7afa50bcbbd3" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Assign1ToRenderdata"/>
+                        <bpws:target linkName="Headers_CheckToRenderdata"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="RenderdataToWriteFile"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input&quot; xmlns:tns2=&quot;http://www.iren.it/CSV_viro_requests/v1&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;period&quot;/>&lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&lt;tns1:Rows>&lt;xsl:for-each select=&quot;$Start/tns3:Records&quot;>&lt;tns2:ViroCsvRow>&lt;xsl:if test=&quot;tns3:cd_incrementale_richiesta&quot;>&lt;tns2:requestId>&lt;xsl:value-of select=&quot;tns3:cd_incrementale_richiesta&quot;/>&lt;/tns2:requestId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns3:cd_codice_pod&quot;>&lt;tns2:supplyPointId>&lt;xsl:value-of select=&quot;tns3:cd_codice_pod&quot;/>&lt;/tns2:supplyPointId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns3:cd_codice_meter&quot;>&lt;tns2:meterSerialNumber>&lt;xsl:value-of select=&quot;tns3:cd_codice_meter&quot;/>&lt;/tns2:meterSerialNumber>&lt;/xsl:if>&lt;xsl:if test=&quot;../tns3:index&quot;>&lt;tns2:itemId>&lt;xsl:value-of select=&quot;../tns3:index&quot;/>&lt;/tns2:itemId>&lt;/xsl:if>&lt;tns2:period>&lt;xsl:value-of select=&quot;$period&quot;/>&lt;/tns2:period>&lt;tns2:timestamp>&lt;xsl:value-of select=&quot;string(current-dateTime())&quot;/>&lt;/tns2:timestamp>&lt;/tns2:ViroCsvRow>&lt;/xsl:for-each>&lt;/tns1:Rows>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.iren.it/fnc_distrib_lista_pod_meter/v1&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/activity/render/xsd/+43a10897-d301-437f-9191-7afa50bcbbd3+input&quot; xmlns:tns2=&quot;http://www.iren.it/CSV_viro_requests/v1&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;period&quot;/>&lt;xsl:param name=&quot;Headers_Check&quot;/>&lt;xsl:template name=&quot;Renderdata-input&quot; match=&quot;/&quot;>&lt;tns1:Rows>&lt;xsl:if test=&quot;$Headers_Check=true()&quot;>&lt;tns2:ViroCsvRow>&lt;tns2:requestId>&lt;xsl:value-of select=&quot;&amp;quot;requestId&amp;quot;&quot;/>&lt;/tns2:requestId>&lt;tns2:supplyPointId>&lt;xsl:value-of select=&quot;&amp;quot;supplyPointId&amp;quot;&quot;/>&lt;/tns2:supplyPointId>&lt;tns2:meterSerialNumber>&lt;xsl:value-of select=&quot;&amp;quot;meterSerialNumber&amp;quot;&quot;/>&lt;/tns2:meterSerialNumber>&lt;tns2:itemId>&lt;xsl:value-of select=&quot;&amp;quot;itemId&amp;quot;&quot;/>&lt;/tns2:itemId>&lt;tns2:period>&lt;xsl:value-of select=&quot;&amp;quot;period&amp;quot;&quot;/>&lt;/tns2:period>&lt;tns2:timestamp>&lt;xsl:value-of select=&quot;&amp;quot;timestamp&amp;quot;&quot;/>&lt;/tns2:timestamp>&lt;/tns2:ViroCsvRow>&lt;/xsl:if>&lt;xsl:for-each select=&quot;$Start/tns3:Records&quot;>&lt;tns2:ViroCsvRow>&lt;xsl:if test=&quot;tns3:cd_incrementale_richiesta&quot;>&lt;tns2:requestId>&lt;xsl:value-of select=&quot;tns3:cd_incrementale_richiesta&quot;/>&lt;/tns2:requestId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns3:cd_codice_pod&quot;>&lt;tns2:supplyPointId>&lt;xsl:value-of select=&quot;tns3:cd_codice_pod&quot;/>&lt;/tns2:supplyPointId>&lt;/xsl:if>&lt;xsl:if test=&quot;tns3:cd_codice_meter&quot;>&lt;tns2:meterSerialNumber>&lt;xsl:value-of select=&quot;tns3:cd_codice_meter&quot;/>&lt;/tns2:meterSerialNumber>&lt;/xsl:if>&lt;xsl:if test=&quot;../tns3:index&quot;>&lt;tns2:itemId>&lt;xsl:value-of select=&quot;../tns3:index&quot;/>&lt;/tns2:itemId>&lt;/xsl:if>&lt;tns2:period>&lt;xsl:value-of select=&quot;$period&quot;/>&lt;/tns2:period>&lt;tns2:timestamp>&lt;xsl:value-of select=&quot;string(current-dateTime())&quot;/>&lt;/tns2:timestamp>&lt;/tns2:ViroCsvRow>&lt;/xsl:for-each>&lt;/tns1:Rows>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1580,7 +1632,7 @@
                         <bpws:target linkName="AssignToRenderdata"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Assign1ToRenderdata"/>
+                        <bpws:source linkName="SetFullnameToHeaders_Check"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1634,6 +1686,25 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="Headers_Check-input"
+                    name="Headers_Check" outputVariable="Headers_Check"
+                    tibex:xpdlId="548b21a4-18a2-431e-9de9-6fd28cf257c7"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="SetFullnameToHeaders_Check"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Headers_CheckToRenderdata"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.iren.it/HeaderCheck&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FullName&quot;/>&lt;xsl:template name=&quot;Headers_Check-input&quot; match=&quot;/&quot;>&lt;tns:fineName>&lt;xsl:value-of select=&quot;$FullName&quot;/>&lt;/tns:fineName>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="it.iren.ireti.predictive.twobeat_estrazioni_viro_vvro.integration.Headers_Check" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
